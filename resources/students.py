@@ -1,4 +1,7 @@
 import json
+import os
+
+from constants import ROOT_DIR
 
 
 class StudentsResource:
@@ -7,8 +10,7 @@ class StudentsResource:
     # It is also pretty sloppy code.
     #
 
-    students_file = \
-        "/Users/charles/Workspace/Columbia/CC_EECS6156/e6156-microservice-1/resources/old-students.json"
+    students_file = os.path.join(ROOT_DIR, "resources/old-students.json")
 
     def __init__(self):
         self.students = None
